@@ -87,7 +87,7 @@ def defuzzification(heating_values, heating_membership_functions):
     
     return numerator / denominator
 
-def task(temperature_json, heating_json, rules_json, current_temperature):
+def main(temperature_json, heating_json, rules_json, current_temperature):
     """
     Основная функция нечеткого управления.
     
@@ -138,5 +138,5 @@ rules_json = """{
 current_temperature = 17
 
 # Вызов функции управления
-heating_level = task(temperature_json, heating_json, rules_json, current_temperature)
+heating_level = main(temperature_json, heating_json, rules_json, current_temperature)
 print(f"Уровень нагрева: {heating_level}")
